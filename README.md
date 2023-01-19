@@ -1,5 +1,8 @@
 <h1 align="center">Osu Beatmaps Downloader CLI</h1>
-<h4 align="center">The CLI tool help to download osu! mirror beatmaps by Beatmap ID or Mapset ID</h4>
+<h4 align="center">The CLI tool help to download osu! mirror beatmaps by Beatmap ID or Mapset ID
+<br> <br>
+<img src="https://img.shields.io/npm/dw/obd-cli"> <img src="https://img.shields.io/npm/v/obd-cli"> <img src="https://img.shields.io/snyk/vulnerabilities/npm/obd-cli"> <img src="https://img.shields.io/github/license/thanhgaming5550/obd-cli"> <img src="https://img.shields.io/github/repo-size/thanhgaming5550/obd-cli">
+</h4>
 
 ## Installation: ```npm i obd-cli -g```
 ## Usage:
