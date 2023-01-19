@@ -166,7 +166,7 @@ const download = (filename, id) => {
     return new Promise((resolve, reject) => {
         console.log(`Downloading Beatmap ${id}... (${count}/${beatmap.length})`);
         const progressBar = new _cliProgress.SingleBar({
-            format: '{bar} {percentage}% | Time Left: {eta}s'
+            format: '[{bar}] {percentage}% | Time Left: {eta}s'
         }, _cliProgress.Presets.shades_classic);
         const file = fs.createWriteStream(filename);
         let receivedBytes = 0
@@ -302,6 +302,11 @@ async function run() {
     //? Fetching Beatmap
     console.info(chalk.bold(chalk.blue("\n[Fetching Beatmap]")))
     await rawProcess();
+
+    //? Create Folder when not found
+    if (!fs.existsSync(locate)){
+        fs.mkdirSync(locate);
+    }
 
     //? Downloading Beatmap
     if (beatmap.length>0) {
