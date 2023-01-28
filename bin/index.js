@@ -171,7 +171,7 @@ const download = (filename, id) => {
         const file = fs.createWriteStream(filename);
         let receivedBytes = 0
 
-        request.get(`https://api.nerinyan.moe/d/${id}?nv=${video}&nh=${hitsound}&nsb=${storyboard}&nb=${background}`)
+        request.get(`https://api.nerinyan.moe/d/${id}?noVideo=${!video}&noBg=${!background}&NoHitsound=${!hitsound}&NoStoryboard=${!storyboard}`)
             .on('response', (response) => {
                 if (response.statusCode !== 200) {
                     reject(`Beatmap ${id} download falled!: ${response.statusCode}`)
